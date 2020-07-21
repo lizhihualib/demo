@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 
 /**
- * Created by 24345 on 2020/6/17.234234234
+ * Created by 24345 on 2020/6/17.
  */
 @Controller
 @RequestMapping("/Hello")
