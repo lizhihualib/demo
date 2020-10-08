@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.ZhuJie.MyAnnotation;
 import com.example.demo.bean.User;
 import com.example.demo.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,16 +16,20 @@ import java.util.HashMap;
 @Controller
 @RequestMapping("/Hello")
 @ResponseBody
+@MyAnnotation(name="lizhihua")
 public class HelloController {
     @Autowired
     UserMapper userInterface;
+
+    //@Autowired
+    //TestService testService;
     @RequestMapping("/SayHello")
     public Object sayHello(){
 
         HashMap<String, String> map = new HashMap<>();
         map.put("1","lizhihua");
         map.put("2","lizhihua2");
-        User user = userInterface.getOne(1);
+        User user = userInterface.getOne(3);
         System.out.println(user);
         return map;
     }
